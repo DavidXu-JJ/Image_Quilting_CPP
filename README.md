@@ -29,3 +29,7 @@ Input image:
 Output synthesized image:
 
 <img class="myImage" src="output/case1.png" /> <img class="myImage" src="output/case2.png" /> <img class="myImage" src="output/case3.png" />
+
+## Note
+
+The effect may varies with respect to our definition on patch size, error tolrence and max iteration. I haven't tested proper parameters for each case. Maybe you can try on different parameters for better results.
