@@ -24,8 +24,8 @@ make run
 
 Input image:
 
-![image](input/example.png)
+<img class="myImage" src="input/case1.png" /> <img class="myImage" src="input/case2.png" /> <img class="myImage" src="input/case3.png" />
 
 Output synthesized image:
 
-![image](output/example.png)
+<img class="myImage" src="output/case1.png" /> <img class="myImage" src="output/case2.png" /> <img class="myImage" src="output/case3.png" />
