@@ -701,13 +701,14 @@ int main(int argc, char** argv) {
     input_path = dir / input_path;
     output_path = dir / output_path;
 
-    int block = 50;
+    int patch_size = 50;
     float overlap = 1.0/6;
     int scale = 2;
-    float tol = 0.01;
+    float tolerance = 0.01;
+    int n_iter = 256;
 
     int opt;
-    while ((opt = getopt(argc, argv, "i:o:")) != -1) {
+    while ((opt = getopt(argc, argv, "i:o:p:v:s:t:n:")) != -1) {
         switch (opt) {
             case 'i':
                 input_path = optarg;
@@ -715,13 +716,28 @@ int main(int argc, char** argv) {
             case 'o':
                 output_path = optarg;
                 break;
+            case 'p':
+                patch_size = std::stoi(optarg);
+                break;
+            case 'v':
+                overlap = std::stof(optarg);
+                break;
+            case 's':
+                scale = std::stoi(optarg);
+                break;
+            case 't':
+                tolerance = std::stof(optarg);
+                break;
+            case 'n':
+                n_iter = std::stoi(optarg);
+                break;
             default:
-                std::cerr << "Usage: " << argv[0] << " [-i input_path] [-o output_path]\n";
+                std::cerr << "Usage: " << argv[0] << " [-i input_path] [-o output_path] [-p patch_size] [-v overlap_ratio] [-s scale] [-t tolerance] [-n n_iter]\n";
                 return 1;
         }
     }
 
-    image_quilting(input_path, output_path, scale, block, overlap, tol, 256);
+    image_quilting(input_path, output_path, scale, patch_size, overlap, tolerance, n_iter);
 
     std::cout << input_path << std::endl;
 

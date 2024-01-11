@@ -17,7 +17,6 @@ all:
 	make cmake
 	make make
 
-.PHONY:run
+.PHONY: run
 run:
-	./build/image_quilting
-
+	./build/image_quilting $(ARGS)

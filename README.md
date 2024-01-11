@@ -8,12 +8,18 @@ This repository is an implementation of the image quilting for texture synthesis
 
 2. https://github.com/rohitrango/Image-Quilting-for-Texture-Synthesis
 
+## Development Environment
+
+MacOS 10.15
+
 ## How to run:
 
 ```
 make all
-make run
+make run [ARGS="[-i input_path] [-o output_path] [-p patch_size] [-v overlap_ratio] [-s scale] [-t tolerance] [-n n_iter]"]
 ```
+
+`[ ]` means optional, you can run through `make run`, `make run ARGS="-p 20"`, `make run ARGS="-p 20 -s 5"`. Anyone of them is runable.
 
 ## Argument for Executable:
 
