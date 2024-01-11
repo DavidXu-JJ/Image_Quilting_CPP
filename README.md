@@ -1,6 +1,6 @@
 # Image quilting for texture synthesis and transfer
 
-This repository is an implementation of the image quilting for texture synthesis and transfer using Cpp.
+This repository is an implementation of image quilting for texture synthesis and transfer using Cpp.
 
 ## Reference:
 
@@ -19,7 +19,9 @@ make all
 make run [ARGS="[-i input_path] [-o output_path] [-p patch_size] [-v overlap_ratio] [-s scale] [-t tolerance] [-n n_iter]"]
 ```
 
-`[ ]` means optional, you can run through `make run`, `make run ARGS="-p 20"`, `make run ARGS="-p 20 -s 5"`. Anyone of them is runable.
+First, `make all` to build.
+
+`[ ]` means optional; you can run through `make run,` `make run ARGS="-p 20"`, `make run ARGS="-p 20 -s 5"`. Any of them is runnable.
 
 ## Argument for Executable:
 
@@ -38,4 +40,4 @@ Output synthesized image:
 
 ## Note
 
-The effect may varies with respect to our definition on patch size, error tolrence and max iteration. I haven't tested proper parameters for each case. Maybe you can try on different parameters for better results.
+The effect may vary according to the definition of patch size, error tolerance, and max iteration. I haven't tested the proper parameters for each case. You could try on different parameters for better results.
